@@ -8,6 +8,23 @@ https://wordpress.org/plugins/page-list/
 	font-weight: bold; /* hilite active item */
 }
 
+/* toggle non active parts */
+.page-list ul {
+  display: none;
+}
+
+.page-list li.open > ul {
+  display: block;
+}
+
+.page-list li.has-children > a::after {
+  content: " ▼";
+  font-size: 0.8em;
+  opacity: 0.6;
+  margin-left: 4px;
+}
+
+
 /* default styles for [pagelist_ext] */
 .page-list-ext {
 	clear: both;
